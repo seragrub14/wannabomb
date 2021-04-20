@@ -1,6 +1,11 @@
 import smtplib
 import sys
 from getpass import getpass
+import os
+import random
+import string
+import time
+import ctypes
 
 
 class bcolors:
@@ -10,14 +15,17 @@ class bcolors:
 
 
 def banner():
-    print(bcolors.GREEN + '+[+[+[ Email-Bomber v1.0 ]+]+]+')
-    print(bcolors.GREEN + '+[+[+[ made with LOVE ]+]+]+')
+    #print(bcolors.GREEN + '+[+[+[ Email-Bomber v1.0 ]+]+]+')
+    #print(bcolors.GREEN + '+[+[+[ made with LOVE ]+]+]+')
+    #self.slowType("+[+[+[ Email-Bomber v1.0 ]+]+]+", .02)
+    time.sleep(1)
+    #self.slowType("+[+[+[ made with LOVE ]+]+]+", .02)
     print(bcolors.GREEN + '''
                      \|/
                        `--+--'
                           |
                       ,--'#`--.
-                      |#######|
+                      |#######| 
                    _.-'#######`-._
                 ,-'###############`-.
               ,'#####################`,          _   _,  ____, _,  _, _,  _,  ____, ____   ____,  __, _, ____  
@@ -30,9 +38,9 @@ def banner():
              \#########################/
               `.#####################,'
                 `._###############_,'
-                   `--..#####..--'                                 ,-.--.
-*.______________________________________________________________,' (Bomb)
-                                                                    `--' ''')
+                   `--..#####..--'      ,-.--.
+'                                       (Bomb)
+                                         `--' ''')
 
 
 class Email_Bomber:
@@ -70,7 +78,7 @@ class Email_Bomber:
         try:
             print(bcolors.RED + '\n+[+[+[ Setting up email ]+]+]+')
             self.server = str(
-                input(bcolors.GREEN + 'Enter email server | or select premade options - 1:Gmail 2:Yahoo 3:Outlook <: '))
+                input(bcolors.GREEN + 'Enter email server | or select premade options - 1:Gmail (not working at this time) 2:Yahoo 3:Outlook <: '))
             premade = ['1', '2', '3']
             default_port = True
             if self.server not in premade:
