@@ -48,8 +48,8 @@ class Email_Bomber:
 
     def __init__(self):
         try:
-            print(bcolors.RED + '\n+[+[+[ Initializing program ]+]+]+')
-            self.target = str(input(bcolors.GREEN + 'Enter target email <: '))
+                print(bcolors.RED + '\n+[+[+[ Initializing program ]+]+]+')
+                self.target = str(input(bcolors.GREEN + 'Enter target email <: '))
             self.mode = int(
                 input(bcolors.GREEN + 'Enter BOMB mode (1,2,3,4) || 1:(1000) 2:(500) 3:(250) 4:(custom) <: '))
             if int(self.mode) > int(4) or int(self.mode) < int(1):
